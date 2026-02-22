@@ -1,0 +1,84 @@
+<!-- About Section -->
+<section id="about" class="section about">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            <p class="section-subtitle">
+                Get to know me better - my background, skills, and what drives me as a developer.
+            </p>
+        </div>
+
+        <div class="about-grid">
+            <!-- About Image -->
+            <div class="about-image-container reveal slide-right">
+                <div class="image-wrapper">
+                    <div class="image-glow"></div>
+                    <div class="image-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="5" />
+                            <path d="M20 21a8 8 0 0 0-16 0" />
+                        </svg>
+                        <span>Your Photo</span>
+                    </div>
+                </div>
+                <div class="experience-badge glass-card">
+                    <span class="badge-number">1+</span>
+                    <span class="badge-text">Years of<br>Experience</span>
+                </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="about-content reveal slide-left">
+                <h3 class="content-title">
+                    A passionate developer who loves to create
+                </h3>
+
+                <p class="content-text">
+                    I am a Results-driven Software Developer skilled in full-stack development, Python-based quantum
+                    frameworks
+                    (Qiskit, Cirq, CudaQ), and HPC/GPU integration. Throughout my journey, I have built highly scalable
+                    scientific web applications with a strong focus on performance, usability, and the seamless
+                    integration
+                    of quantum simulators.
+                </p>
+
+                <p class="content-text">
+                    I continually strive to push the boundaries of quantum computing and modern web development through
+                    interactive circuit visualization, automated transpilation, and optimizing high-performance
+                    computing platforms.
+                </p>
+
+                <!-- Skills Grid -->
+                <div class="skills-section">
+                    <h4 class="skills-title">Technologies I work with</h4>
+                    <div class="skills-grid">
+                        @for (skill of skills; track skill.name) {
+                        <div class="skill-item glass-card">
+                            <div class="skill-icon" [style.color]="skill.color">
+                                <span [innerHTML]="skill.icon"></span>
+                            </div>
+                            <span class="skill-name">{{ skill.name }}</span>
+                        </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="about-actions">
+                    <a href="#contact" class="btn btn-primary" (click)="scrollTo($event, 'contact')">
+                        Let's Work Together
+                    </a>
+                    <a href="/assets/resume.pdf" class="btn btn-secondary" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" x2="12" y1="15" y2="3" />
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

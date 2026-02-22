@@ -1,0 +1,80 @@
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container hero-container">
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-icon">👋</span>
+                <span>Welcome to my portfolio</span>
+            </div>
+
+            <h1 class="hero-title animate-fade-in-up">
+                Hi, I'm <span class="gradient-text">Rahul Singh</span>
+                <br />
+                <span class="title-role">Software Developer</span>
+            </h1>
+
+            <p class="hero-description animate-fade-in-up">
+                Results-driven Software Developer skilled in full-stack development, Python-based quantum
+                frameworks, and HPC/GPU integration. Experienced in building scalable scientific web applications.
+            </p>
+
+            <div class="hero-actions animate-fade-in-up">
+                <a href="#projects" class="btn btn-primary" (click)="scrollTo($event, 'projects')">
+                    <span>View My Work</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary" (click)="scrollTo($event, 'contact')">
+                    Get In Touch
+                </a>
+            </div>
+
+            <div class="hero-stats animate-fade-in">
+                @for (stat of stats; track stat.label) {
+                <div class="stat-item">
+                    <span class="stat-value">{{ stat.value }}</span>
+                    <span class="stat-label">{{ stat.label }}</span>
+                </div>
+                }
+            </div>
+        </div>
+
+        <div class="hero-visual animate-fade-in">
+            <div class="visual-container">
+                <div class="visual-glow"></div>
+                <div class="visual-card">
+                    <div class="card-header">
+                        <div class="card-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="card-title">portfolio.ts</span>
+                    </div>
+                    <pre class="card-code"><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = &#123;
+  <span class="code-property">name</span>: <span class="code-string">"Rahul Singh"</span>,
+  <span class="code-property">role</span>: <span class="code-string">"Software Developer"</span>,
+  <span class="code-property">skills</span>: [
+    <span class="code-string">"Python"</span>,
+    <span class="code-string">"JavaScript"</span>,
+    <span class="code-string">"React.js"</span>,
+    <span class="code-string">"WordPress"</span>
+  ],
+  <span class="code-property">passion</span>: <span class="code-string">"Quantum Computing & Web apps"</span>
+&#125;;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+        <span>Scroll Down</span>
+    </div>
+</section>

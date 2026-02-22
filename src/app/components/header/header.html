@@ -1,0 +1,46 @@
+<!-- Header Component -->
+<header class="header" [class.scrolled]="isScrolled">
+    <div class="container header-container">
+        <!-- Logo -->
+        <a href="#home" class="logo" (click)="scrollToSection($event, 'home')">
+            <span class="logo-text">Portfolio</span>
+            <span class="logo-accent">.</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-desktop">
+            <ul class="nav-list">
+                @for (item of navItems; track item.id) {
+                <li class="nav-item">
+                    <a [href]="'#' + item.id" class="nav-link" [class.active]="activeSection === item.id"
+                        (click)="scrollToSection($event, item.id)">
+                        {{ item.label }}
+                    </a>
+                </li>
+                }
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" [class.active]="isMobileMenuOpen" (click)="toggleMobileMenu()"
+            aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Mobile Navigation -->
+        <nav class="nav-mobile" [class.open]="isMobileMenuOpen">
+            <ul class="nav-list-mobile">
+                @for (item of navItems; track item.id) {
+                <li class="nav-item-mobile">
+                    <a [href]="'#' + item.id" class="nav-link-mobile" [class.active]="activeSection === item.id"
+                        (click)="scrollToSection($event, item.id); closeMobileMenu()">
+                        {{ item.label }}
+                    </a>
+                </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</header>

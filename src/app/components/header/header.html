@@ -28,19 +28,19 @@
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
         </button>
-
-        <!-- Mobile Navigation -->
-        <nav class="nav-mobile" [class.open]="isMobileMenuOpen">
-            <ul class="nav-list-mobile">
-                @for (item of navItems; track item.id) {
-                <li class="nav-item-mobile">
-                    <a [href]="'#' + item.id" class="nav-link-mobile" [class.active]="activeSection === item.id"
-                        (click)="scrollToSection($event, item.id); closeMobileMenu()">
-                        {{ item.label }}
-                    </a>
-                </li>
-                }
-            </ul>
-        </nav>
     </div>
 </header>
+
+<!-- Mobile Navigation -->
+<nav class="nav-mobile" [class.open]="isMobileMenuOpen">
+    <ul class="nav-list-mobile">
+        @for (item of navItems; track item.id) {
+        <li class="nav-item-mobile">
+            <a [href]="'#' + item.id" class="nav-link-mobile" [class.active]="activeSection === item.id"
+                (click)="scrollToSection($event, item.id); closeMobileMenu()">
+                {{ item.label }}
+            </a>
+        </li>
+        }
+    </ul>
+</nav>
